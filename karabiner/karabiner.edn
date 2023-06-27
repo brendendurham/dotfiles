@@ -1,0 +1,8 @@
+{:profiles 
+    {:goku {:default true
+            :alone   80 ; hold for .. ms to register single tap
+            :held    50 ; TODO: not sure what it's for
+            :delay   0 ; time after which the key press is delayed
+            :sim     30}} ; keys need to be pressed within this threshold to be considered simultaneous
+
+}
