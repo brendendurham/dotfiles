@@ -44,12 +44,31 @@ else
   echo "[INFO] Symlink for tmux.conf already exists, skipping."
 fi
 
-# Copy tmux.conf.local if it doesn't exist
-if [ ! -e "$TMUX_CONFIG_PATH/tmux.conf.local" ]; then
-  echo "[INFO] Copying tmux.conf.local..."
-  cp "$OH_MY_TMUX_PATH/.tmux.conf.local" "$TMUX_CONFIG_PATH/tmux.conf.local" || error_exit "Failed to copy tmux.conf.local"
-else
-  echo "[INFO] tmux.conf.local already exists, skipping."
-fi
+# Get the directory of the currently executing script
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Function for copying files
+copy_file_if_not_exists() {
+  local src=$1
+  local dest=$2
+
+  if [ ! -e "$dest" ]; then
+    echo "[INFO] Copying $src to $dest..."
+    cp "$src" "$dest" || { echo "[ERROR] Failed to copy $src to $dest"; exit 1; }
+  else
+    echo "[INFO] $dest already exists, skipping."
+  fi
+}
+
+# Destination path for tmux config
+TMUX_CONFIG_PATH="$HOME/.config/tmux"
+
+# Ensure the destination directory exists
+mkdir -p "$TMUX_CONFIG_PATH"
+
+# Copy .tmux.conf.local from the script's directory to the destination
+copy_file_if_not_exists \
+  "$DIR/.tmux.conf.local" \
+  "$TMUX_CONFIG_PATH/.tmux.conf.local"
 
 echo "[INFO] tmux setup completed successfully."
