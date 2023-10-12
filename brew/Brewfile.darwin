@@ -1,6 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap railwaycat/emacsmacport
 tap "homebrew/cask-versions"
+brew yqrashawn/goku/goku
+brew koekeishiya/formulae/yabai
 brew "bash"
 brew "coreutils"
 brew "bat"
@@ -14,6 +17,9 @@ brew "exa"
 brew "fd"
 brew "fzf"
 brew "gh"
+brew graphviz
+brew docker-compose
+brew fish
 brew "jq"
 brew "difftastic"
 brew "git"
@@ -54,7 +60,30 @@ cask "font-jetbrains-mono-nerd-font"
 cask "hiddenbar"
 cask "keycastr"
 cask "kitty"
-cask "motrix"
 cask "stats"
 cask "karabiner-elements"
 cask "devonthink"
+cask keyboard-maestro
+cask bettertouchtool
+cask font-source-code-pro
+cask sublime-text
+cask firefox-developer-edition
+cask arc
+cask visual-studio-code-insiders
+cask devonthink
+cask devonagent
+cask obsidian
+cask kitty
+cask alacritty
+cask warp
+cask google-chrome-canary
+cask microsoft-edge-dev
+cask safari-technology-preview
+cask context
+
+# App Store applications
+appstore 409183694 Keynote (13.2)
+appstore 409203825 Numbers (13.2)
+appstore 409201541 Pages (13.2)
+appstore 497799835 Xcode (15.0)
+
