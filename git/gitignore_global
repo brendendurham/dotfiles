@@ -1,0 +1,92 @@
+# Global gitignore
+
+# --------------------
+# Common Ignore Rules
+# --------------------
+
+# Compiled source
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Temporary and backup files
+*~
+*.bak
+*.sav
+*.backup
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# -----------------
+# Language-Specific
+# -----------------
+
+# Node
+node_modules
+
+# Go
+*.exe
+*.test
+.glide/
+
+# Java
+*.class
+*.log
+*.ctxt
+.mtj.tmp/
+*.jar
+*.war
+*.ear
+
+# TeX
+*.aux
+*.lof
+*.log
+*.lot
+*.toc
+*.out
+*.bbl
+*.blg
+*.run.xml
+
+# -------------
+# Editor-Specific
+# -------------
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+Session.vim
+*.swp
+*.swo
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Token and environment files
+token
+.envrc
+.direnv*
